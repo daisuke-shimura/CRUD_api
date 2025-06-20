@@ -10,5 +10,8 @@
     "rebornix.Ruby",
     "castwide.solargraph"
   ],
+  "containerEnv": {
+    "DISABLE_SPRING": "1"
+  },
   "postCreateCommand": "bundle install || true"
 }

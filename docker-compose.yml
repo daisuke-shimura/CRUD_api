@@ -1,7 +1,10 @@
 version: "3.9"
 services:
   web:
+    environment:
+        - SECRET_KEY_BASE=development_key
     build: .
+    command: bash
     ports:
       - "3000:3000"
     volumes:

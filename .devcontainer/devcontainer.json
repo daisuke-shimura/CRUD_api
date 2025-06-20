@@ -1,0 +1,14 @@
+{
+  "name": "rails-api-dev",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "web",
+  "workspaceFolder": "/app",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "extensions": [
+    "rebornix.Ruby",
+    "castwide.solargraph"
+  ],
+  "postCreateCommand": "bundle install || true"
+}

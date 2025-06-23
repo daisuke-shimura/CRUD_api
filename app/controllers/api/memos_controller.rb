@@ -15,12 +15,6 @@ module Api
       end
     end
 
-    def new
-    end
-
-    def edit
-    end
-
     def create
       memo = Memo.new(memo_params)
       if memo.save!
@@ -40,7 +34,12 @@ module Api
     end
 
     def destroy
-
+      memo = Memo.find(params[:id])
+      if memo.destroy
+        render json: {message: "正常に削除できました"}
+      else
+        render json: { status: 404, message: "Not Found"}, status: 404
+      end
     end
 
 
